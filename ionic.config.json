@@ -1,0 +1,7 @@
+{
+  "name": "Zep-Academy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
