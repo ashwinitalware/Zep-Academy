@@ -1,0 +1,163 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="text-white" >Dashboard</ion-title>
+    <ion-icon slot="end" class="pr-3 text-lg text-white" name="notifications-outline" routerLink="/notification"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container #swiper (slidechange)="swiperSlideChanged($event)" [loop]="true">
+    <swiper-slide *ngFor="let image of allslider">
+      <div class="p-2">
+        <img class="rounded-md" src="{{image.image?this.url.imageUrl+'/'+image.image: 'assets/.png'}}">
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <ion-grid class="p-2">
+    <ion-row class="p-2 rounded-md" [ngStyle]="rowStyle">
+      <ion-col size="3">
+        <a routerLink="/passbook">
+          <div class="text-center">
+            <ion-icon class="text-white" name="clipboard-outline"></ion-icon>
+            <p class="text-white text-sm" >Passbook</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="3">
+        <a routerLink="/Account">
+          <div class="text-center">
+            <ion-icon class="text-white" name="wallet-outline"></ion-icon>
+            <p class="text-white text-sm" >Withdrawal</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="3">
+        <a routerLink="/OTP">
+          <div class="text-center">
+            <ion-icon class="text-white" name="people-outline"></ion-icon>
+            <p class="text-white text-sm" style="font-size: 12px;">Registration</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="3">
+        <div class="text-center">
+          <ion-icon class="text-white" name="share-social-outline"></ion-icon>
+          <p class="text-white text-sm" style="font-size: 12px;">Refer</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid >
+    <ion-row class="p-2">
+      <ion-col size="4">
+        <a routerLink="/Tree_view">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg1">
+            <div class="flex justify-center">
+              <img src="assets/dash1.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Team Tree <br>View</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Level_status">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg2">
+            <div class="flex justify-center">
+              <img src="assets/statistics.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Level-Status Graph</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Level_status_BV">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg3">
+            <div class="flex justify-center">
+              <img src="assets/statistics.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Level Status With BV</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Royalty_graph">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg4">
+            <div class="flex justify-center">
+              <img src="assets/scroll.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Royalty <br />Graph</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Income">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg9">
+            <div class="flex justify-center">
+              <img src="assets/income.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Income Statement</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Tsp_achiever">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg6">
+            <div class="flex justify-center">
+              <img src="assets/growth.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">TSP <br />Achiever</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/shopping-dash">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg7">
+            <div class="flex justify-center">
+              <img src="assets/online-shopping.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Shopping</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Gallery">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg8">
+            <div class="flex justify-center">
+              <img src="assets/picture.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Gallery</p>
+          </div>
+        </a>
+      </ion-col>
+
+      <ion-col size="4">
+        <a routerLink="/Achievements">
+          <div class="text-center border border-blue-300 rounded-md p-2 bg5">
+            <div class="flex justify-center">
+              <img src="assets/achivement.png" alt="" />
+            </div>
+            <p class="text-black text-sm mt-1">Achievement</p>
+          </div>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<app-footer></app-footer>
+

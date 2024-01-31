@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+ <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button color="light"></ion-back-button>
+  </ion-buttons>
+  <ion-title color="light">Notification</ion-title>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="p-2">
+    <div *ngFor="let notification of allnotification"
+      class="flex flex-col relative overflow-hidden sm:py-12 mt-3">
+
+      <div class="border-l-2 border-pink-400 relative px-2 py-2 bg-white rounded-md shadow-lg mt-2">
+        <div class="flex justify-between ">
+          <p><b>{{notification.title}}</b></p>
+          <a
+            class="block text-indigo-500 group-hover:text-slate-800 transition duration-200">30 Jan 2024</a>
+        </div>
+        <div class="space-y-2 mt-1">
+          <p class="text-slate-700">{{notification.message}}</p>
+        </div>
+      </div>
+      <!-- <div class="border border-gray-200 relative px-2 py-2 bg-white rounded-lg  flex items-top space-x-6">
+        <div class="flex justify-between p-2">
+          <p><b>{{notification.title}}</b></p>
+          <a
+            class="block text-indigo-400 group-hover:text-slate-800 transition duration-200">{{notification.select_date}}</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-slate-800">{{notification.description}}</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</ion-content>

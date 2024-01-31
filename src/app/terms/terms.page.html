@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" ></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> Terms of Conditions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="p-1 mt-3">
+    <div class="waviy" align="center">
+      <span style="--i:1">T</span>
+      <span style="--i:2">e</span>
+      <span style="--i:3">r</span>
+      <span style="--i:4">m</span>
+      <span style="--i:5">s</span>&nbsp;
+      <span style="--i:6"></span>
+      <span style="--i:7">O</span>
+      <span style="--i:8">f</span>
+      <span style="--i:9"></span>&nbsp;
+      <span style="--i:10">C</span>
+      <span style="--i:11">o</span>
+      <span style="--i:12">n</span>
+      <span style="--i:13">d</span>
+      <span style="--i:14">i</span>
+      <span style="--i:15">t</span>
+      <span style="--i:16">i</span>
+      <span style="--i:17">o</span>
+      <span style="--i:18">n</span>
+      <span style="--i:19">s</span>
+     </div>
+
+  </div>
+
+  <div class="p-3" align="justify" *ngFor="let terms of alltermsdata">
+    <p [innerHTML]="terms?.terms_and_conditions"></p>
+  </div>
+</ion-content>

@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Zhep Academy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="flex justify-start border border-gray-400 rounded-md p-1 mt-1 mb-1">
+        <ion-icon class="text-blue-600 p-1 mt-1 mb-1" name="search"></ion-icon>
+        <p class="text-sm pl-2 p-1 mt-1 mb-1">Search</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
+
+  <div class='bg-gray-50 p-1'>
+    <div *ngFor="let category of allcategory">
+      <ion-label class='text-black font-bold pl-2 mt-2'>{{category.category_name}}</ion-label>
+    </div>
+
+    <div class="p-1">
+      <swiper-container #swiper (slidechange)="swiperSlideChanged($event)" [loop]="true" [slidesPerView]="2" [spaceBetween]="10">
+        <swiper-slide class="bg-white rounded-md" *ngFor="let product of allproduct">
+          <div class="p-1">
+            <img class="rounded-md" src="{{product.image?this.url.imageUrl+'/'+product.image: 'assets/.png'}}">
+            <p class='text-black font-bold text-sm mt-2'>The Way of the Bear</p>
+            <div class='flex justify-start p-1 mt-1'>
+              <p class="text-blue-400">₹ 500</p>&nbsp;<p class='text-gray-400 text-xs mt-1'><s>MRP. 800</s></p>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <!-- *ngFor="let product of allproduct" -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size='6' >
+          <a routerLink="/product-details">
+            <div class='bg-white rounded-md shadow-md p-2'>
+              <img src="assets/p1.png" alt="" class='rounded-sm' />
+              <p class='text-black font-bold text-sm mt-2'>The Way of the Bear</p>
+              <div class='flex justify-start p-1 mt-1'>
+                <p class="text-blue-400">₹ 500</p>&nbsp;<p class='text-gray-400 text-xs mt-1'><s>MRP. 800</s></p>
+              </div>
+            </div>
+          </a>
+        </ion-col>
+        <ion-col size='6'>
+          <a routerLink="/product-details">
+            <div class='bg-white rounded-md shadow-md p-2'>
+              <img src="assets/p2.png" alt="" class='rounded-sm' />
+              <p class='text-black font-bold text-sm mt-2'>WordWise</p>
+              <div class='flex justify-start p-1 mt-1'>
+                <p class="text-blue-400">₹ 400</p>&nbsp;<p class='text-gray-400 text-xs mt-1'><s>MRP. 800</s></p>
+              </div>
+            </div>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div style="background-color: #685dbd; color: white; padding: 10px; paddingLeft: 15px; paddingRight: 15px; borderTopLeftRadius: 20px; borderTopRightRadius: 20px; display: flex; justify-content: space-between; align-items: center;">
+    <a routerLink="/Dashboard" style="color: white; text-decoration: none;">
+      <div class="text-center pl-2">
+        <ion-icon name="person"></ion-icon>
+        <ion-title class="text-sm">Home</ion-title>
+      </div>
+    </a>
+
+    <a routerLink="/order" style="color: white; text-decoration: none;">
+      <div class="text-center pl-2">
+        <ion-icon name="basket-outline"></ion-icon>
+        <ion-title class="text-sm">My Orders</ion-title>
+      </div>
+    </a>
+
+    <a routerLink="/Add_To_Cart" style="color: white; text-decoration: none;">
+      <div class="text-center pl-2">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-title class="text-sm">Cart</ion-title>
+      </div>
+    </a>
+
+    <a routerLink="/Profile" style="color: white; text-decoration: none;">
+      <div class="text-center pr-2">
+        <ion-icon name="grid-outline"></ion-icon>
+        <ion-title class="text-sm">More</ion-title>
+      </div>
+    </a>
+  </div>
+</ion-footer>
+

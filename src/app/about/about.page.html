@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" ></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="p-1 mt-3">
+    <div class="waviy" align="center">
+      <span style="--i:1">A</span>
+      <span style="--i:2">b</span>
+      <span style="--i:3">o</span>
+      <span style="--i:4">u</span>
+      <span style="--i:5">t</span>
+      <span style="--i:6"></span>&nbsp;
+      <span style="--i:7">U</span>
+      <span style="--i:8">s</span>
+     </div>
+
+  </div>
+ 
+  <div class="p-3" align="justify" *ngFor="let about of allaboutdata">
+    <p [innerHTML]="about.about_us"></p>
+  </div>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-title class="text-white">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form class="p-3" #form_login="ngForm" >
+
+   <div align="center" class="mt-4">
+    <img width="100" height="100" src="assets/logo1.png" alt="">
+   </div>
+
+    <div class="relative mt-5">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500 dark:text-gray-400">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </svg>
+      </div>
+      <input type="number" name="mobile" value="mobile" ngModel required
+        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Enter Mobile" >
+    </div>
+
+    <div class="relative mt-4">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500 dark:text-gray-400">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+      </div>
+      <input type="password" name="password" value="password" ngModel required
+        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Enter Password" >
+    </div>
+
+
+    <div class="mt-4" >
+      <button expand="block"  (click)="login_submit(form_login)"
+        class="btn-3 w-full p-4 text-white rounded-md text-sm">
+        Sign In
+      </button>
+    </div>
+
+
+
+    <div class="flex justify-center mt-10 pl-3 pr-3">
+      <p class="bg-yellow-300 text-white rounded-md p-2 pl-3 pr-3">Forgot Password</p>
+    </div>
+
+    <div class="flex justify-center mt-10 pl-3 pr-3">
+      <p class="text-black  p-2 pl-2 pr-2">Don't have an account?</p>
+    </div>
+
+    <div class="flex justify-center mt-2 pl-3 pr-3" routerLink="/mobileverify">
+      <p class="bg-yellow-300 text-white rounded-md p-2 pl-3 pr-3">Register</p>
+    </div>
+  </form>
+
+</ion-content>

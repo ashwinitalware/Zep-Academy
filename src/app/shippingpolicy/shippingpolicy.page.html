@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" ></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light"> Shipping Policy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="p-1 mt-3">
+    <div class="waviy" align="center">
+      <span style="--i:1">S</span>
+      <span style="--i:2">h</span>
+      <span style="--i:3">i</span>
+      <span style="--i:4">p</span>
+      <span style="--i:5">p</span>
+      <span style="--i:6">i</span>
+      <span style="--i:7">n</span>
+      <span style="--i:8">g</span>
+      <span style="--i:9"></span>
+      <span style="--i:10">P</span>
+      <span style="--i:10">o</span>
+      <span style="--i:10">l</span>
+      <span style="--i:10">i</span>
+      <span style="--i:10">c</span>
+      <span style="--i:10">y</span>
+     </div>
+
+  </div>
+
+
+  <div class="p-3" align="justify" *ngFor="let shipping of allshippingdata">
+    <p [innerHTML]="shipping?.shipping_policy"></p>
+  </div>
+</ion-content>

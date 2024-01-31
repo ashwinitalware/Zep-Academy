@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button color="light"></ion-back-button>
+      </ion-buttons>
+      <ion-title color="light">My Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="p-1 -mt-2 border-b border-gray-400 flex justify-between">
+    <span class="text-gray-400 text-xs mt-3 text-left">Current Balance</span>
+    <span class="text-gray-400 text-xs mt-3 text-right">₹ 0.0</span>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <div class="border border-gray-200 rounded-md p-2">
+          <img src="assets/p1.png" alt="" class="rounded-sm" width="100%" height="30" />
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="text-right" style="z-index: 10000; position: absolute; margin-left: 82%;">
+          <ion-icon class="text-lg pr-1" name="trash"></ion-icon>
+        </div>
+        <div class="p-1 -mt-2">
+          <p class="text-black font-bold text-sm mt-1">Product Name</p>
+          <span class="text-gray-400 text-xs mt-1 flex justify-between">No Size Available</span>
+          <span class="text-gray-400 text-xs mt-1 flex justify-between">No Color Available</span>
+          <p>₹ 500. ✖ 1 = 500.</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="tertiary">
+    <div class="flex justify-between pl-3 pr-3">
+      <div>
+        <p>₹ 500.0</p>
+      </div>
+      <div>
+        <ion-button size="small" color="light" routerLink="/checkout">Checkout</ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+

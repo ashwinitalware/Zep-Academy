@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar >
+      <ion-buttons slot="start">
+        <ion-back-button color="light" ></ion-back-button>
+      </ion-buttons>
+      <ion-title color="light" >Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="p-1 -mt-2 border-b border-gray-400 flex justify-between">
+    <span class="text-gray-400 text-xs mt-3 text-left">Current Balance</span>
+    <span class="text-gray-400 text-xs mt-3 text-right">₹ 0.0</span>
+  </div>
+
+  <div class="border border-gray-300 rounded-md p-2 mt-2">
+    <p class="text-black text-lg font-semibold mt-2">Order Summary</p>
+    <div class="flex justify-between">
+      <span class="text-gray-400 text-sm">Total Amount</span>
+      <span class="text-gray-400 text-sm">450.00</span>
+    </div>
+    <div class="flex justify-between">
+      <span class="text-gray-400 text-sm">Total Tax</span>
+      <span class="text-gray-400 text-sm">50.00</span>
+    </div>
+    <div class="flex justify-between">
+      <span class="text-gray-400 text-sm">Gross Amount</span>
+      <span class="text-gray-400 text-sm">500.00</span>
+    </div>
+    <div class="flex justify-between">
+      <span class="text-gray-400 text-sm">Shipping Charge</span>
+      <span class="text-gray-400 text-sm">0.00</span>
+    </div>
+    <div class="flex justify-between border-b border-black-100">
+      <span class="text-gray-400 text-sm">Wallet Used</span>
+      <span class="text-gray-400 text-sm">500.00</span>
+    </div>
+    <hr />
+    <div class="flex justify-between">
+      <span class="text-gray-400 text-sm">Net Amount</span>
+      <span class="text-gray-400 text-sm">500.00</span>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="tertiary">
+    <div class="flex justify-between pl-3 pr-3">
+      <div>
+        <p>₹ 500.0</p>
+      </div>
+      <div>
+        <ion-button size="small" color="light" routerLink="/success">Place Order</ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
